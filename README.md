@@ -8,7 +8,7 @@ STEP 1:
 
 
 STEP 2:
- model.pkl file is more than 25MB. So, I cant upload here If you want it reach me : jagaps2003@gmail.com
+ model.pkl file is more than 25MB. So, I cant upload here If you want it reach me : jaganps2003@gmail.com
 
 
 
