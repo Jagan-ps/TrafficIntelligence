@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrafficTelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Ubuntu', sans-serif;
+      background-size: fit;
+      background-repeat: no-repeat;
+      background-image: url("https://inrix.com/wp-content/uploads/2017/01/Hotspot-study-mast-image-2000-1200.jpg");
+    }
+
+    #form {
+      position: relative;
+      top: 50px;
+      margin: 0 auto;
+      width: 40%;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(3px);
+    }
+
+    #heading {
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .form-element {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      font-size: 13px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    label {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #fff;
+      background-color: #5ecf64;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #16741b;
+    }
+  </style>
+</head>
+<body>
+  <form id="form" action="{{ url_for('predict')}}" method="post">
+    <h1 id="heading">TrafficTelligence: Advanced Traffic Volume Estimation With Machine Learning</h1>
+    <center><h3>Please fill the details</h3></center>
+    <label for="holiday">Holiday:</label>
+    <select name="holiday" id="holiday" class="form-element">
+      <option value="7">None</option>
+      <option value="1">Columbus Day</option>
+      <option value="10">Veterans Day</option>
+      <option value="9">Thanksgiving Day</option>
+      <option value="0">Christmas Day</option>
+      <option value="6">New Years Day</option>
+      <option value="11">Washingtons Birthday</option>
+      <option value="5">Memorial Day</option>
+      <option value="2">Independence Day</option>
+      <option value="8">State Fair</option>
+      <option value="3">Labor Day</option>
+      <option value="4">Martin Luther King Jr Day</option>
+    </select>
+
+    <label for="temp">Temperature:</label>
+    <input type="number" name="temp" id="temp" class="form-element" placeholder="Temperature" required>
+
+    <label for="rain">Rain:</label>
+    <input type="number" name="rain" id="rain" class="form-element" min="0" max="100" placeholder="Rain" required>
+
+    <label for="snow">Snow:</label>
+    <input type="number" name="snow" id="snow" class="form-element" min="0" max="100" placeholder="Snow" required>
+
+    <label for="weather">Weather:</label>
+    <select name="weather" id="weather" class="form-element">
+      <option value="1">Clouds</option>
+      <option value="0">Clear</option>
+      <option value="6">Rain</option>
+      <option value="2">Drizzle</option>
+      <option value="5">Mist</option>
+      <option value="4">Haze</option>
+      <option value="3">Fog</option>
+      <option value="10">Thunderstorm</option>
+      <option value="8">Snow</option>
+      <option value="9">Squall</option>
+      <option value="7">Smoke</option>
+    </select>
+
+    <label for="year">Year:</label>
+    <input type="number" name="year" id="year" class="form-element" min="2012" max="2022" placeholder="Year" required>
+
+    <label for="month">Month:</label>
+    <input type="number" name="month" id="month" class="form-element" min="1" max="12" placeholder="Month" required>
+
+    <label for="day">Day:</label>
+    <input type="number" name="day" id="day" class="form-element" min="1" max="31" placeholder="Day" required>
+
+    <label for="hours">Hours:</label>
+    <input type="number" name="hours" id="hours" class="form-element" min="0" max="24" placeholder="Hours" required>
+
+    <label for="minutes">Minutes:</label>
+    <input type="number" name="minutes" id="minutes" class="form-element" min="0" max="60" placeholder="Minutes" required>
+
+    <label for="seconds">Seconds:</label>
+    <input type="number" name="seconds" id="seconds" class="form-element" min="0" max="60" placeholder="Seconds" required>
+
+    <button type="submit">Predict</button>
+  </form>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Traffic Volume Estimation</title>
+  <style>
+    body {
+      background-image: url("https://www.aboutcivil.org/sites/default/files/2017-10/traffic-volume-study.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 50px;
+      text-align: center;
+    }
+    
+    h1 {
+      font-size: 40px;
+      color: #fff;
+      margin-bottom: 30px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    }
+    
+    .result {
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    
+    h2 {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    
+    p {
+      font-size: 18px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Traffic Volume Estimation</h1>
+    <div class="result">
+      <h2>Result</h2>
+      <p>{{result}}</p>
+    </div>
+  </div>
+</body>
+</html>
