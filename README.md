@@ -14,11 +14,11 @@ STEP 2:
 
 
  STEP 3:
-  Run the app.py file you can see the output, it means index template fill the all inputs and click submit
+  Run the app.py file you can see output, it means index template fill the all inputs and click submit
 
 
 
 
 
-  You can see traffic volume estimation
+  You can see final value of traffic volume estimation
  
